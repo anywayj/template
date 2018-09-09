@@ -45,8 +45,12 @@ Project should be deployed beyond web accessible folder. Actual web root should 
 ```bash
 ln -s /path/to/project/web /var/www/html/project
 ```
-
-
+```datetimepicker
+$ php composer.phar require kartik-v/yii2-widget-datetimepicker "*"
+```
+```image
+$ php composer.phar require kartik-v/yii2-widget-fileinput "@dev"
+```
 ASSET COMPRESSION
 -----------------
 
