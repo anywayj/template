@@ -12,9 +12,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 	<?= $form->field($model, 'username') ?>
-    <?= $form->field($model, 'status')->dropDownList([
+    <?= $form->field($model, 'statusId')->dropDownList([
                     '10' => 'Разрешить',
-    				'0' => 'Забанить',
+    				'1' => 'Забанить',
                     
                 ])
     ?>
