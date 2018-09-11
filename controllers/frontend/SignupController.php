@@ -2,8 +2,7 @@
 
 namespace app\controllers\frontend;
 
-use app\models\frontend\SignupForm;
-use app\models\frontend\SignupFormtwo;
+use app\models\frontend\{SignupForm,SignupFormtwo};
 use yii\filters\{AccessControl,VerbFilter};
 use Yii;
 use yii\base\Exception;
@@ -56,6 +55,7 @@ class SignupController extends Controller
             $user1 = $modelnew->signuptwo();
             if (($user = $model->signup()) !== null) {
                if (Yii::$app->getUser()->login($user)) {
+               Yii::$app->session->setFlash('success', Yii::t('access', 'Thank you for singup.'));
                     return $this->goHome();
                 } 
             }  
