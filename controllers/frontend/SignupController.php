@@ -3,7 +3,7 @@
 namespace app\controllers\frontend;
 
 use app\models\frontend\SignupForm;
-use app\models\frontend\SignupFormTwo;
+use app\models\frontend\SignupFormtwo;
 use yii\filters\{AccessControl,VerbFilter};
 use Yii;
 use yii\base\Exception;
