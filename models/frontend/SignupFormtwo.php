@@ -37,6 +37,7 @@ class SignupFormtwo extends Model
         return [
             'firstname' => 'Имя',
             'lastname' => 'Фамилия',
+	    'avatarimage' => 'Аватарка',
         ];
     }
 	
