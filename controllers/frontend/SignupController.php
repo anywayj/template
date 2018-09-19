@@ -51,11 +51,12 @@ class SignupController extends Controller
 
         $model = new SignupForm();
         $modelnew = new SignupFormtwo();
+        $modelnew->avatarimage = 'owl.video.play.png';
         if ($model->load(Yii::$app->request->post()) && $modelnew->load(Yii::$app->request->post())) {
             $user1 = $modelnew->signuptwo();
             if (($user = $model->signup()) !== null) {
                if (Yii::$app->getUser()->login($user)) {
-               Yii::$app->session->setFlash('success', Yii::t('access', 'Спасибо за регистрацию!.'));
+               Yii::$app->session->setFlash('success', Yii::t('access', 'Спасибо за регистрацию!'));
                     return $this->goHome();
                 } 
             }  
