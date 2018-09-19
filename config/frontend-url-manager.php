@@ -5,8 +5,7 @@
 
 return [
     'class' => yii\web\UrlManager::class,
-    //'baseUrl' => isset($baseUrl) ? $baseUrl : null,
-    'baseUrl' => '/index.php',
+    'baseUrl' => isset($baseUrl) ? $baseUrl : null,
     'hostInfo' => isset($hostInfo) ? $hostInfo : null,
     'enablePrettyUrl' => true,
     'showScriptName' => false,
