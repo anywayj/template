@@ -55,7 +55,7 @@ class SignupController extends Controller
             $user1 = $modelnew->signuptwo();
             if (($user = $model->signup()) !== null) {
                if (Yii::$app->getUser()->login($user)) {
-               Yii::$app->session->setFlash('success', Yii::t('access', 'Thank you for singup.'));
+               Yii::$app->session->setFlash('success', Yii::t('access', 'Спасибо за регистрацию!.'));
                     return $this->goHome();
                 } 
             }  
