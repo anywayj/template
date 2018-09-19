@@ -14,7 +14,7 @@ class SignupFormtwo extends Model
  
     public $firstname;
     public $lastname;
-   
+    public $avatarimage;
 
 
     /**
@@ -25,7 +25,7 @@ class SignupFormtwo extends Model
         return [
             [['firstname','lastname'], 'trim'],
             [['firstname','lastname'], 'required'],
-            [['firstname','lastname'], 'string', 'min' => 3, 'max' => 255],
+            [['firstname','lastname','avatarimage'], 'string', 'min' => 3, 'max' => 255],
            
             
         ];
@@ -57,7 +57,7 @@ class SignupFormtwo extends Model
         $user1 = new RecordUser();
         $user1->firstname = $this->firstname;
         $user1->lastname = $this->lastname;
-       
+        $user1->avatarimage = $this->avatarimage;
         return $user1->save() ? $user1 : null;
     }
  
